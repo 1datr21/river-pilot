@@ -1,15 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="Vue logo" src="./assets/logo.jpg" width="200">
+  <HelloWorld msg="ЛОЦМАН"/>
+  <RPField />
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import RPField from './components/RPField.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld, RPField
   }
 }
 </script>

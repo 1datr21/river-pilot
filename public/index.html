@@ -4,8 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <script src="https://yandex.ru/games/sdk/v2"></script> 
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <script>
+      YaGames
+.init()
+.then(ysdk => {
+          console.log('Yandex SDK initialized');
+          window.ysdk = ysdk;
+
+          ysdk.features.LoadingAPI?.ready(); // Показываем SDK, что игра загрузилась и можно начинать играть
+      });
+    </script>
   </head>
   <body>
     <noscript>
